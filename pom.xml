@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.leadtech.cv.dev</groupId>
-    <artifactId>hello-home</artifactId>
-    <version>0.1</version>
+    <artifactId>leadtech-dev-hello-home</artifactId>
+    <packaging>jar</packaging>
+    <version>0.4</version>
 
     <dependencies>
 
@@ -14,6 +15,12 @@
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-lambda-java-core</artifactId>
             <version>1.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.leadtech.cv.dev</groupId>
+            <artifactId>helloutils</artifactId>
+            <version>0.1</version>
         </dependency>
 
         <dependency>
