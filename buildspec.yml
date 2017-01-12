@@ -3,15 +3,13 @@ version: 0.1
 phases:
   pre_build:
     commands:
-      - echo Pre-build started on `date`
-      - Installing custom dependencies
-      - pwd
-      - ls -la
+      - echo "Pre-build started on `date`"
+      - echo "Installing custom dependencies"
       - mvn install:install-file -Dfile=lib/helloutils-0.1.jar
   build:
     commands:
-      - echo Build started on `date`
+      - echo "Build started on `date`"
       - mvn clean package shade:shade
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo "Build completed on `date`"
