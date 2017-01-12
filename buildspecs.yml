@@ -1,0 +1,19 @@
+version: 0.1
+
+phases:
+  pre_build:
+    commands:
+      - echo Pre-build started on `date`
+      - Installing custom dependencies
+      - mvn install:install-file -Dfile=lib/helloutils-0.1.jar
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn install
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/messageUtil-1.0.jar
+  discard-paths: yes
